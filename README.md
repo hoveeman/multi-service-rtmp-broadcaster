@@ -1,3 +1,5 @@
+This is a fork from: https://github.com/michaelkamprath/multi-service-rtmp-broadcaster
+
 # Multi-Service RTMP Broadcaster
 
 The goal of this project is to create a Docker-deployed service that will allow you to easily broadcast a livestream to multiple services (YouTube, Twitch, Facebook, etc) at the same time. This stream rebroadcaster is designed to be used by a single source / user.
