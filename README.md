@@ -13,35 +13,51 @@ The first step is to build the docker file. After you clone this repository, `cd
 docker build -t multistreaming-server ./multistreaming-server/
 ```
 
-Once built, start the serve on the same host as where your streaming source (e.g., OBS) is running with:
+Once built, start the server on the same host as where your streaming source (e.g., OBS) is running with:
 
 ```
 docker run -it -p 80:80 -p 1935:1935 \
   --env MULTISTREAMING_PASSWORD=__made_up_password__ \
-  --env "MULTISTREAMING_KEY_TWITCH=__your_twitch_stream_key__" \
-  --env "MULTISTREAMING_KEY_FACEBOOK=__your_facebook_stream_key__" \
-  --env "MULTISTREAMING_KEY_INSTAGRAM=__your_instagram_stream_key_from_yellow_duck__" \
-  --env "MULTISTREAMING_KEY_YOUTUBE=__your_youtube_stream_key__" \  
-  --env "MULTISTREAMING_KEY_MICROSOFTSTREAM=__your_microsoft_stream_ingest_url__" \
-  --env "MULTISTREAMING_KEY_CUSTOM=__your_full_rtmp_url__" \
-  --env "MULTISTREAMING_KEY_PERISCOPE=__your_periscope_stream_key__" \
-  --env "PERISCOPE_REGION_ID=__periscope_2-letter_region_code__" \
+  --env "MULTISTREAMING_KEY_TWITCH1=__your_twitch_stream_key__" \
+  --env "MULTISTREAMING_KEY_TWITCH2=__your_twitch_stream_key__" \
+  --env "MULTISTREAMING_KEY_FACEBOOK1=__your_facebook_stream_key__" \
+  --env "MULTISTREAMING_KEY_FACEBOOK2=__your_facebook_stream_key__" \
+  --env "MULTISTREAMING_KEY_INSTAGRAM1=__your_instagram_stream_key_from_yellow_duck__" \
+  --env "MULTISTREAMING_KEY_INSTAGRAM2=__your_instagram_stream_key_from_yellow_duck__" \
+  --env "MULTISTREAMING_KEY_YOUTUBE1=__your_youtube_stream_key__" \  
+  --env "MULTISTREAMING_KEY_YOUTUBE2=__your_youtube_stream_key__" \  
+  --env "MULTISTREAMING_KEY_MICROSOFTSTREAM1=__your_microsoft_stream_ingest_url__" \
+  --env "MULTISTREAMING_KEY_MICROSOFTSTREAM2=__your_microsoft_stream_ingest_url__" \
+  --env "MULTISTREAMING_KEY_CUSTOM1=__your_full_rtmp_url__" \
+  --env "MULTISTREAMING_KEY_CUSTOM2=__your_full_rtmp_url__" \
+  --env "MULTISTREAMING_KEY_PERISCOPE1=__your_periscope_stream_key__" \
+  --env "PERISCOPE_REGION_ID1=__periscope_2-letter_region_code__" \
+  --env "MULTISTREAMING_KEY_PERISCOPE2=__your_periscope_stream_key__" \
+  --env "PERISCOPE_REGION_ID2=__periscope_2-letter_region_code__" \
   multistreaming-server:latest
 ```
 
 Alternatively, you could use the DockerHub build of this image by pulling and using the `kamprath/multistreaming-server:latest` Docker image.
 
-Note that several environment variables are set when running the Docker image:
+Note that several environment variables are set when running the Docker image. There are duplicates for each service if you would like to stream to different pages for one service.
 
 * `MULTISTREAMING_PASSWORD` _(REQUIRED)_ - This is a password you define and will be used by your steaming software. This is a marginally secure way to prevent other people from pushing to your stream.
-* `MULTISTREAMING_KEY_TWITCH` _(OPTIONAL)_ - Your Twitch stream key. Only define if you want to rebroadcast your stream to Twitch.
-* `MULTISTREAMING_KEY_FACEBOOK` _(OPTIONAL)_ - Your Facebook stream key. Only define if you want to rebroadcast your stream to Facebook.
-* `MULTISTREAMING_KEY_INSTAGRAM` _(OPTIONAL)_ - Your Instagram stream key. You will need to use https://yellowduck.tv/ to retrieve your stream key for Instagram. Only define if you want to rebroadcast your stream to Instagram.
-* `MULTISTREAMING_KEY_YOUTUBE` _(OPTIONAL)_ - Your YouTube stream key. Only define if you want to rebroadcast your stream to YouTube.
-* `MULTISTREAMING_KEY_MICROSOFTSTREAM` _(OPTIONAL)_ - Your Microsoft Stream Ingest URL. Only define if you want to rebroadcast your stream to Microsoft Stream.
-* `MULTISTREAMING_KEY_CUSTOM` _(OPTIONAL)_ - Your full RTMP url, including rtmp://, to any live stream service. Only define if you want to rebroadcast your stream to a custom service.
-* `MULTISTREAMING_KEY_PERISCOPE` _(OPTIONAL)_ - Your Periscope stream key. Only define if you want to rebroadcast your stream to Periscope.
-* `PERISCOPE_REGION_ID` _(OPTIONAL)_ - The two letter region code that is part of the Periscope server URL. If undefined, it will default to `ca` (the "US West" region)
+* `MULTISTREAMING_KEY_TWITCH1` _(OPTIONAL)_ - Your Twitch stream key. Only define if you want to rebroadcast your stream to Twitch.
+* `MULTISTREAMING_KEY_TWITCH2` _(OPTIONAL)_ - Your Twitch stream key. Only define if you want to rebroadcast your stream to Twitch.
+* `MULTISTREAMING_KEY_FACEBOOK1` _(OPTIONAL)_ - Your Facebook stream key. Only define if you want to rebroadcast your stream to Facebook.
+* `MULTISTREAMING_KEY_FACEBOOK2` _(OPTIONAL)_ - Your Facebook stream key. Only define if you want to rebroadcast your stream to Facebook.
+* `MULTISTREAMING_KEY_INSTAGRAM1` _(OPTIONAL)_ - Your Instagram stream key. You will need to use https://yellowduck.tv/ to retrieve your stream key for Instagram. Only define if you want to rebroadcast your stream to Instagram.
+* `MULTISTREAMING_KEY_INSTAGRAM2` _(OPTIONAL)_ - Your Instagram stream key. You will need to use https://yellowduck.tv/ to retrieve your stream key for Instagram. Only define if you want to rebroadcast your stream to Instagram.
+* `MULTISTREAMING_KEY_YOUTUBE1` _(OPTIONAL)_ - Your YouTube stream key. Only define if you want to rebroadcast your stream to YouTube.
+* `MULTISTREAMING_KEY_YOUTUBE2` _(OPTIONAL)_ - Your YouTube stream key. Only define if you want to rebroadcast your stream to YouTube.
+* `MULTISTREAMING_KEY_MICROSOFTSTREAM1` _(OPTIONAL)_ - Your Microsoft Stream Ingest URL. Only define if you want to rebroadcast your stream to Microsoft Stream.
+* `MULTISTREAMING_KEY_MICROSOFTSTREAM2` _(OPTIONAL)_ - Your Microsoft Stream Ingest URL. Only define if you want to rebroadcast your stream to Microsoft Stream.
+* `MULTISTREAMING_KEY_CUSTOM1` _(OPTIONAL)_ - Your full RTMP url, including rtmp://, to any live stream service. Only define if you want to rebroadcast your stream to a custom service.
+* `MULTISTREAMING_KEY_CUSTOM2` _(OPTIONAL)_ - Your full RTMP url, including rtmp://, to any live stream service. Only define if you want to rebroadcast your stream to a custom service.
+* `MULTISTREAMING_KEY_PERISCOPE1` _(OPTIONAL)_ - Your Periscope stream key. Only define if you want to rebroadcast your stream to Periscope.
+* `PERISCOPE_REGION_ID1` _(OPTIONAL)_ - The two letter region code that is part of the Periscope server URL. If undefined, it will default to `VA` (the "US East" region)
+* `MULTISTREAMING_KEY_PERISCOPE2` _(OPTIONAL)_ - Your Periscope stream key. Only define if you want to rebroadcast your stream to Periscope.
+* `PERISCOPE_REGION_ID2` _(OPTIONAL)_ - The two letter region code that is part of the Periscope server URL. If undefined, it will default to `VA` (the "US East" region)
 
 You could start this docker with no stream keys defined, but that wouldn't do anything interesting then.
 

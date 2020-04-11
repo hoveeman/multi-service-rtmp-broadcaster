@@ -1,5 +1,5 @@
 		# MicrosftStream RTMP Application
-		application microsoftstream {
+		application microsoftstream2 {
 			live on;
 			record off;
 
@@ -8,5 +8,5 @@
 			deny publish all;
 
 			# Push URL with the MicrosoftStream Ingest URL and App Name
-			push ${MICROSOFTSTREAMRTMP} app=${MICROSOFTSTREAMAPPNAME};
+			push ${MICROSOFTSTREAMRTMP2} app=${MICROSOFTSTREAMAPPNAME2};
 		}

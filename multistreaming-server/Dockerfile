@@ -31,8 +31,10 @@ COPY index.html /usr/local/nginx/html/
 COPY nginx-conf/nginx-conf-*.txt /
 COPY launch-nginx-server.sh launch-nginx-server.sh
 COPY stunnel-conf/etc-default-stunnel /etc/default/stunnel
-COPY stunnel-conf/etc-stunnel-conf.d-fb.conf /etc/stunnel/conf.d/fb.conf
-COPY stunnel-conf/etc-stunnel-conf.d-ig.conf /etc/stunnel/conf.d/ig.conf
+COPY stunnel-conf/etc-stunnel-conf.d-fb1.conf /etc/stunnel/conf.d/fb1.conf
+COPY stunnel-conf/etc-stunnel-conf.d-fb2.conf /etc/stunnel/conf.d/fb2.conf
+COPY stunnel-conf/etc-stunnel-conf.d-ig1.conf /etc/stunnel/conf.d/ig1.conf
+COPY stunnel-conf/etc-stunnel-conf.d-ig2.conf /etc/stunnel/conf.d/ig2.conf
 COPY stunnel-conf/etc-stunnel-stunnel.conf /etc/stunnel/stunnel.conf
 
 # forward request and error logs to docker log collector
