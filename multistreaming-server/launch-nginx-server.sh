@@ -51,7 +51,7 @@ fi
 
 if [ $MULTISTREAMING_KEY_PERISCOPE1 ]; then
 	if [ !$PERISCOPE_REGION_ID1 ]; then
-		export PERISCOPE_REGION_ID1='va'
+		export PERISCOPE_REGION_ID1=va
 	fi
 	envsubst < nginx-conf-periscope1.txt >>  /usr/local/nginx/conf/nginx.conf
 	sed -e "s/##PUSH_PERISCOPE_MARKER1##//g" -i /usr/local/nginx/conf/nginx.conf
@@ -59,7 +59,7 @@ fi
 
 if [ $MULTISTREAMING_KEY_PERISCOPE2 ]; then
 	if [ !$PERISCOPE_REGION_ID2 ]; then
-		export PERISCOPE_REGION_ID2='va'
+		export PERISCOPE_REGION_ID2=va
 	fi
 	envsubst < nginx-conf-periscope2.txt >>  /usr/local/nginx/conf/nginx.conf
 	sed -e "s/##PUSH_PERISCOPE_MARKER2##//g" -i /usr/local/nginx/conf/nginx.conf

@@ -22,6 +22,6 @@
 			allow publish 127.0.0.1;
 			deny publish all;
 
-			# Push URL with the Twitch stream key
+			# Push URL with the Periscope stream key
 			push rtmp://${PERISCOPE_REGION_ID2}.pscp.tv:80/x/${MULTISTREAMING_KEY_PERISCOPE2};
 		}
