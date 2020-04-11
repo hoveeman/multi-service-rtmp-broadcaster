@@ -1,5 +1,5 @@
 		# Instagram Stream Application using Yellow Duck TV
-		application instagram {
+		application instagram1 {
 			live on;
 			record off;
 
@@ -9,5 +9,5 @@
 
 			# Push URL with the Instagram stream key. We are using stunnel to
 			# push to a secure stream.
-			push rtmp://127.0.0.1:19351/rtmp/${MULTISTREAMING_KEY_INSTAGRAM};
+			push rtmp://127.0.0.1:19361/rtmp/${MULTISTREAMING_KEY_INSTAGRAM1};
 		}

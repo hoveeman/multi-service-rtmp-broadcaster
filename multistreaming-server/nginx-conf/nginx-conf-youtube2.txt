@@ -1,5 +1,5 @@
 		# YouTube Stream Application
-		application youtube {
+		application youtube2 {
 			live on;
 			record off;
 
@@ -8,5 +8,5 @@
 			deny publish all;
 
 			# Push URL with the YouTube stream key
-			push rtmp://a.rtmp.youtube.com/live2/${MULTISTREAMING_KEY_YOUTUBE};
+			push rtmp://a.rtmp.youtube.com/live2/${MULTISTREAMING_KEY_YOUTUBE2};
 		}

@@ -1,5 +1,5 @@
 		# Twitch Stream Application
-		application twitch {
+		application twitch2 {
 			live on;
 			record off;
 
@@ -8,5 +8,5 @@
 			deny publish all;
 
 			# Push URL with the Twitch stream key
-			push rtmp://live-cdg.twitch.tv/app/${MULTISTREAMING_KEY_TWITCH};
+			push rtmp://live-cdg.twitch.tv/app/${MULTISTREAMING_KEY_TWITCH2};
 		}

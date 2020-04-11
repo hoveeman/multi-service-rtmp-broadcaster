@@ -141,11 +141,18 @@ rtmp {
 			record_path /var/www/html/recordings;
 			record_unique on;
 			# Define the applications to which the stream will be pushed, comment them out to disable the ones not needed:
-##PUSH_TWITCH_MARKER##   push rtmp://localhost/twitch;
-##PUSH_FACEBOOK_MARKER##   push rtmp://localhost/facebook;
-##PUSH_INSTAGRAM_MARKER##   push rtmp://localhost/instagram;
-##PUSH_YOUTUBE_MARKER##   push rtmp://localhost/youtube;
-##PUSH_CUSTOM_MARKER##   push rtmp://localhost/custom;
-##PUSH_PERISCOPE_MARKER##   push rtmp://localhost/periscope_transcode;
-##PUSH_MICROSOFTSTREAM_MARKER##   push rtmp://localhost/microsoftstream;
+##PUSH_TWITCH_MARKER1##   push rtmp://localhost/twitch1;
+##PUSH_TWITCH_MARKER2##   push rtmp://localhost/twitch2;
+##PUSH_FACEBOOK_MARKER1##   push rtmp://localhost/facebook1;
+##PUSH_FACEBOOK_MARKER2##   push rtmp://localhost/facebook2;
+##PUSH_INSTAGRAM_MARKER1##   push rtmp://localhost/instagram1;
+##PUSH_INSTAGRAM_MARKER2##   push rtmp://localhost/instagram2;
+##PUSH_YOUTUBE_MARKER1##   push rtmp://localhost/youtube1;
+##PUSH_YOUTUBE_MARKER2##   push rtmp://localhost/youtube2;
+##PUSH_CUSTOM_MARKER1##   push rtmp://localhost/custom1;
+##PUSH_CUSTOM_MARKER2##   push rtmp://localhost/custom2;
+##PUSH_MICROSOFTSTREAM_MARKER1##   push rtmp://localhost/microsoftstream1;
+##PUSH_MICROSOFTSTREAM_MARKER2##   push rtmp://localhost/microsoftstream2;
+##PUSH_PERISCOPE_MARKER1##   push rtmp://localhost/periscope_transcode1;
+##PUSH_PERISCOPE_MARKER2##   push rtmp://localhost/periscope_transcode2;
 		}

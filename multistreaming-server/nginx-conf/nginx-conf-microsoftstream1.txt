@@ -1,0 +1,12 @@
+		# MicrosftStream RTMP Application
+		application microsoftstream1 {
+			live on;
+			record off;
+
+			# Only allow localhost to publish
+			allow publish 127.0.0.1;
+			deny publish all;
+
+			# Push URL with the MicrosoftStream Ingest URL and App Name
+			push ${MICROSOFTSTREAMRTMP1} app=${MICROSOFTSTREAMAPPNAME1};
+		}

@@ -1,5 +1,5 @@
 		# Facebook Stream Application
-		application facebook {
+		application facebook1 {
 			live on;
 			record off;
 
@@ -9,5 +9,5 @@
 
 			# Push URL with the Facebook stream key. We are using stunnel to
 			# push to a secure stream.
-			push rtmp://127.0.0.1:19350/rtmp/${MULTISTREAMING_KEY_FACEBOOK};
+			push rtmp://127.0.0.1:19351/rtmp/${MULTISTREAMING_KEY_FACEBOOK1};
 		}
