@@ -1,5 +1,5 @@
 FROM alpine:3
-MAINTAINER Michael Kamprath "https://github.com/michaelkamprath"
+MAINTAINER hoveeman "https://github.com/hoveeman"
 
 ARG NGINX_VERSION=1.17.9
 ARG RTMP_REPO=defanator
