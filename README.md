@@ -37,7 +37,7 @@ docker run -it -p 80:80 -p 1935:1935 \
   multistreaming-server:latest
 ```
 
-Alternatively, you could use the DockerHub build of this image by pulling and using the `kamprath/multistreaming-server:latest` Docker image.
+Alternatively, you could use the DockerHub build of this image by pulling and using the `hovee/multistreaming-server:latest` Docker image.
 
 Note that several environment variables are set when running the Docker image. There are duplicates for each service if you would like to stream to different pages for one service.
 
